@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="app-purple">
+        <ion-title>ElementAt</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Retrieves element from a collection at specified (zero-based) index.</li>
+                <li>This Lambda Expression sample retrieves second element from an array. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_ElementAt_Lambda</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>string</span>[] <span>words </span><span> = </span> <span> &#123; <span class='langvalue'>"One"</span>, <span class='langvalue'>"Two"</span>, <span class='langvalue'>"Three"</span> &#125;;</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = words.</span><span class='langmethod'>ElementAt</span>(1);</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Element at index 1 in the array is:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(result);</span></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Element at index 1 in the array is:</span><br/>
+            <span>Two</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

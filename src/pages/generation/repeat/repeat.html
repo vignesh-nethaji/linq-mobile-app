@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar  color="app-purple-deep">
+        <ion-title>Repeat</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Creates a collection of repeated elements, where first argument is value to repeat, and second argument is
+                    number of times to repeat. </li>
+                <li>This Lambda Expression sample repeats the word "Banana" 5 times. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Repeat_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>string</span> <span>word</span><span> = </span> <span class="langvalue">"Banana"</span>;</div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = </span><span class='langmethod'>Enumerable.Repeat</span>(word
+                , 5);</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"String is repeated 5 times:"</span><span>);</span></div>
+            <div class="codepad"><span class='langkeywords'>foreach</span> (<span class='langkeywords'>string</span> str <span class='langkeywords'>in </span>result)</div>
+            <div class="codepad">
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(str);</span></div>
+            </div>
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>String is repeated 5 times:</span><br/>
+            <span>Banana</span><br/>
+            <span>Banana</span><br/>
+            <span>Banana</span><br/>
+            <span>Banana</span><br/>
+            <span>Banana</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

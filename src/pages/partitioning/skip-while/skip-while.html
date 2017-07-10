@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar color="app-orange">
+        <ion-title>SkipWhile</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Skips elements in a collection while specified condition is met. </li>
+                <li>This Lambda Expression sample skips words in array, as long as word has length of 3 characters. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_SkipWhile_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>string</span>[] <span>words </span><span> = </span><span>&#123; <span class='langvalue'>"one"</span>,
+                <span class='langvalue'>"two"</span>, <span class='langvalue'>"three"</span>, <span class='langvalue'>"four"</span>,
+                <span class='langvalue'>"five"</span>, <span class='langvalue'>"six"</span> &#125;;</span>
+            </div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = words.</span><span class='langmethod'>SkipWhile</span>(w
+                => w.<span class='langmethod'>Length </span> == 3);</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Skips words while the condition is met:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>string </span>word <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(word);</span></div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Skips words while the condition is met:</span><br/>
+            <span>three</span><br/>
+            <span>four</span><br/>
+            <span>five</span><br/>
+            <span>six</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

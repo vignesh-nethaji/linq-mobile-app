@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-navbar color="app-pink">
+        <ion-title>ToLookup </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Converts a collection into a Lookup, grouped by key. </li>
+                <li>This Lambda Expression sample puts array elements into a one-to-many Lookup, where key equals element length.
+                </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_ToLookup_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>string</span><span>[] </span> <span>words </span><span> = </span> <span> &#123; <span class='langmethod'>"one"</span>,
+                <span class='langvalue'>"two"</span>, <span class='langvalue'>"three"</span>, <span class='langvalue'>"four"</span>,
+                <span class='langvalue'>"five"</span>, <span class='langvalue'>"six"</span>, <span class='langvalue'>"seven"</span>                &#125;;</span>
+            </div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = words .</span><span class='langmethod'>ToLookup</span>(w
+                => w.<span class='langmethod'>Length</span>);</div>
+
+            <div class='codepad'><span class='langkeywords'>for</span> (<span class='langkeywords'>int</span> i = 1; i
+                <=5 ; i++)</div>
+                    <div class='codepad'>&#123;</div>
+                    <div class='codepad'>
+                        <div class='codepad'><span class='langmethod'>Console</span>.<span class='langmethod'>WriteLine</span>(<span class='langmethod'>String</span>.
+                            <span class='langmethod'>Format</span>(<span class='langvalue'>"Elements with a length of &#123;0}:"</span>,
+                            i));</div>
+                    </div>
+                    <div class='codepad'>
+                        <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>string</span> word <span class='langkeywords'>in</span>result[i])</div>
+                    </div>
+                    <div class='codepad'>
+                        <div class='codepad'>
+                            <div class='codepad'> <span class='langmethod'>Console</span>.<span class='langmethod'>WriteLine</span>(word);</div>
+                        </div>
+                    </div>
+                    <div class='codepad'>}</div>
+
+
+                    <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Elements with a length of 1:</span><br/>
+            <span>Elements with a length of 2:</span><br/>
+            <span>Elements with a length of 3:</span><br/>
+            <span>one</span><br/>
+            <span>two</span><br/>
+            <span>six</span><br/>
+            <span>Elements with a length of 4:</span><br/>
+            <span>four</span><br/>
+            <span>five</span><br/>
+            <span>Elements with a length of 5:</span><br/>
+            <span>three</span><br/>
+            <span>seven</span>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

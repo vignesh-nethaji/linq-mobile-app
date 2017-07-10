@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="app-pink">
+        <ion-title> ToArray </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Converts type to a new array. </li>
+                <li>This Lambda Expression sample converts one array to another. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_ToArray_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>int</span><span>[ ] </span><span>numbers</span><span> = </span> <span class="langkeywords">new int</span>                <span>[ ] &#123; 1, 2, 3, 4  &#125;;</span></div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers.</span><span class='langmethod'>ToArray</span>();</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"New array contains identical values:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach</span> (<span class='langkeywords'>int </span> <span>number </span>
+                <span
+                    class='langkeywords'>in </span> <span> result ) </span></div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(number);</span></div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>New array contains identical values:</span><br/>
+            <span>1</span><br/>
+            <span>2</span><br/>
+            <span>3</span><br/>
+            <span>4</span><br/>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

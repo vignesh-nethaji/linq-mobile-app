@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-navbar color="app-indigo">
+        <ion-title>ThenByDescending</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Use after earlier sorting, to further sort a collection in descending order. </li>
+                <li>This Lambda Expression sample first orders a list of dates by year descending, and then by month descending.</li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_ThenByDescending_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>dates </span><span> = </span> <span class="langkeywords">new </span>
+                <span
+                    class="langmethod">DateTime</span><span>[ ] </span></div>
+            <div class="codepad">&#123;</div>
+            <div class="codepad">
+                <div class="codepad"><span class="langkeywords">new </span><span class="langmethod">DateTime</span><span>(2015, 3, 1),</span></div>
+            </div>
+            <div class="codepad">
+                <div class="codepad"><span class="langkeywords">new </span><span class="langmethod">DateTime</span><span>(2014, 7, 1),</span></div>
+            </div>
+            <div class="codepad">
+                <div class="codepad"><span class="langkeywords">new </span><span class="langmethod">DateTime</span><span>(2013, 5, 1),</span></div>
+            </div>
+            <div class="codepad">
+                <div class="codepad"><span class="langkeywords">new </span><span class="langmethod">DateTime</span><span>(2015, 1, 1),</span></div>
+            </div>
+            <div class="codepad">
+                <div class="codepad"><span class="langkeywords">new </span><span class="langmethod">DateTime</span><span>(2015, 7, 1) </span></div>
+            </div>
+            <div class="codepad">};</div>
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = dates.</span><span class='langmethod'>OrderByDescending</span>(d
+                => d.<span class='langmethod'>Year</span>).<span class='langmethod'>ThenByDescending</span>(d => d.
+                <span
+                    class='langmethod'>Month</span>);</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"List of dates first ordered by year descending, and then by month descending:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langmethod'>DateTime </span>dt <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(dt.<span class='langmethod'>ToString</span>(
+                    <span
+                        class='langvalue'>"yyyy-MM-dd"</span>));</span>
+                </div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>List of dates first ordered by year descending, and then by month descending:</span><br/>
+            <span>2015-07-01</span><br/>
+            <span>2015-03-01</span><br/>
+            <span>2015-01-01</span><br/>
+            <span>2014-07-01</span><br/>
+            <span>2013-05-01</span><br/>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

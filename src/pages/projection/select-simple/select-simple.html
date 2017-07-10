@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="app-teal">
+        <ion-title>Select (simple)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Selects, projects and transforms elements in a collection. </li>
+                <li>This Lambda Expression sample selects and rounds down each number in array. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Select_Lambda_Simple</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>decimal</span>[] <span>numbers</span><span> = </span> <span class="langkeywords">new decimal</span>                <span>[ ] &#123; 3.4M, 8.33M, 5.225M  &#125;;</span></div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers.</span><span class='langmethod'>Select</span>(n
+                => <span class='langmethod'>Math.Floor</span>(n));</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Numbers rounded down:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>int </span>number <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(number);</span></div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Numbers rounded down:</span><br/>
+            <span>3</span><br/>
+            <span>8</span><br/>
+            <span>5</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

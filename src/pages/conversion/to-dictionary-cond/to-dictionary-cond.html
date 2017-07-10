@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="app-pink">
+        <ion-title>ToDictionary (cond.)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Converts collection into a Dictionary with Key and Value. </li>
+                <li>This Lambda Expression sample uses ToDictionary to make a new array based on condition. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_ToDictionary_Lambda_Conditional</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>int</span><span>[ ]</span> <span>numbers</span><span> = </span> <span class="langkeywords">new int</span>                <span>[ ] &#123; 1, 2, 3, 4  &#125;;</span></div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers.</span><span class='langmethod'>ToDictionary</span>(k
+                => k, v => (v % 2) == 1 ? <span class="langvalue">"Odd" </span><span> : </span> <span class="langvalue"> "Even"</span>);</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Numbers labeled Odd and Even in dictionary:"</span><span>);</span></div>
+            <div class='codepad'><span class='langkeywords'>foreach </span><span> ( </span> <span class="langkeywords"> var </span> <span>dic</span>                <span class="langkeywords">in</span> <span>result)</span></div>
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(result);</span></div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span> Numbers labeled Odd and Even in dictionary:</span><br/>
+            <span>Value 1 is Odd</span><br/>
+            <span>Value 2 is Even</span><br/>
+            <span>Value 3 is Odd</span><br/>
+            <span>Value 4 is Even</span>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-navbar color="app-teal">
+        <ion-title>Select (indexed)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Selects, projects and transforms elements in a collection. Can be overloaded to get element index. </li>
+                <li>This Lambda Expression sample selects word and element index from array. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Select_Lambda_Indexed</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>string</span>[] <span>words </span><span> = </span> <span> &#123; <span class='langvalue'>"one"</span>,
+                <span class='langvalue'>"two"</span>, <span class='langvalue'>"three"</span> &#125;;</span>
+            </div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = words.</span><span class='langmethod'>Aggregate</span>((w,
+                i) => <span class="langkeywords">new</span></div>
+            <div class='codepad'>&#123;</div>
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Index </span>= i,</div>
+            </div>
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Value </span>= w</div>
+            </div>
+            <div class='codepad'>});</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Words with index and value:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>var </span>word <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(<span class='langmethod'>String.Format</span>(
+                    <span
+                        class='langvalue'>"Index &#123;0} is &#123;1}"</span>, word.<span class='langmethod'>Index</span>, word.<span class='langmethod'>Value</span>));</span>
+                </div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Words with index and value:</span><br/>
+            <span>Index 0 is one</span><br/>
+            <span>Index 1 is two</span><br/>
+            <span>Index 2 is three</span><br/>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

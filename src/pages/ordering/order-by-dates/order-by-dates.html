@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar color="app-indigo">
+        <ion-title>OrderBy (simple - dates)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Sorts a collection in ascending order. </li>
+                <li>This Lambda Expression sample sorts array of dates in ascending order.  </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_OrderBy_Lambda_Dates</span><span>()</span></div>
+           
+            <div>&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>var</span> <span>dates </span><span> = </span> <span class="langkeywords">new </span><span class="langmethod">DateTime</span><span>[ ] </span></div>
+            <div class="codepad">&#123;</div>
+                <div class="codepad"><div class="codepad"><span class='langkeywords'>new </span><span class='langmethod'>DateTime</span><span>(2015, 2, 15),</span></div></div>
+                <div class="codepad"><div class="codepad"><span class='langkeywords'>new </span><span class='langmethod'>DateTime</span><span>(2015, 3, 25),</span></div></div>
+                <div class="codepad"><div class="codepad"><span class='langkeywords'>new </span><span class='langmethod'>DateTime</span><span>(2015, 1, 5)  </span></div></div>
+            <div class="codepad">};</div>
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = dates.</span><span class='langmethod'>OrderBy</span>(d => d);</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Ordered list of dates:"</span>);</div>
+            
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langmethod'>DateTime </span>dt <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'><div class='codepad'><span class='langmethod'>Console.WriteLine</span>(dt.<span class='langmethod'>ToString</span>(<span class='langvalue'>"yyyy/MM/dd"</span>));</div></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+           <span>Ordered list of dates:</span><br/>
+<span>2015-01-05</span><br/>
+<span>2015-02-15</span><br/>
+<span>2015-03-25</span>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

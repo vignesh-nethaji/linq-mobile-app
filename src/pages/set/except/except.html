@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar color="app-grey">
+        <ion-title>Except</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Performs a specified operation to each element in a collection, while carrying the result forward. </li>
+                <li>This Lambda Expression sample aggregates numbers in array by multiplication. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Except_Lambda</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>int</span>[] <span>numbers1 </span><span> = </span> <span class="langkeywords">new int</span>            <span>[ ] &#123; 1, 2, 3  &#125;;</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>int</span>[] <span>numbers2 </span><span> = </span> <span class="langkeywords">new int</span>            <span>[ ] &#123; 3, 4, 5   &#125;;</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers1.</span><span class='langmethod'>Except</span>(numbers2);</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Aggregated numbers by multiplication:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>int </span>number <span class='langkeywords'>in </span>result)</div>
+            
+            <div class='codepad'><div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(number);</span></div></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Except creates a single sequence from numbers1 and removes the duplicates found in numbers2:</span><br/>
+            <span>1</span>
+            <span>2</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-navbar color="app-teal">
+        <ion-title>Select (anonymous)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Selects, projects and transforms elements in a collection. </li>
+                <li>This Lambda Expression sample calculates cos and sin of selected angles, and projects result into anonymously
+                    typed elements. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Select_Lambda_Anonymous</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>double</span>[] <span>angles </span><span> = </span> <span class="langkeywords">new double</span>                <span>[ ] &#123; 30D, 60D, 90D  &#125;;</span></div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = angles.</span><span class='langmethod'>Select</span>(a =>
+                <span class='langkeywords'>new </span>&#123; <span class='langmethod'>Angle </span>= a, <span class='langmethod'>Cos </span>=
+                <span class='langmethod'>Math.Cos</span>(a), <span class='langmethod'>Sin </span>= <span class='langmethod'>Math.Sin</span>(a)
+                });</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Calculated value:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>var </span>res <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(<span class='langmethod'>String.Format</span>(
+                    <span
+                        class='langvalue'>"Angle &#123;0}: Cos = &#123;1}, Sin = &#123;2}"</span>, res.<span class='langmethod'>Angle</span>, res.
+                        <span
+                            class='langmethod'>Cos</span>, res.<span class='langmethod'>Sin</span>));</span>
+                </div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Calculated value:</span><br/>
+            <span>Angle 30: Cos = 0,154251449887584, Sin = -0,988031624092862</span><br/>
+            <span>Angle 60: Cos = -0,952412980415156, Sin = -0,304810621102217</span><br/>
+            <span>Angle 90: Cos = -0,44807361612917, Sin = 0,893996663600558</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

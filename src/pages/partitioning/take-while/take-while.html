@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar color="app-orange">
+        <ion-title>TakeWhile</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Takes elements in a collection while specified condition is met, starting from first element. </li>
+                <li>This Lambda Expression sample takes numbers from array, while number is less than 5. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_TakeWhile_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>int</span>[] <span>numbers</span><span> = </span> <span class="langkeywords">new int</span>                <span>[ ] &#123; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10  &#125;;</span></div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers.</span><span class='langmethod'>TakeWhile</span>(n
+                => n
+                < 5);</div>
+
+                    <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Takes numbers one by one, and stops when condition is no longer met:"</span><span>);</span></div>
+
+                    <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>int </span>number <span class='langkeywords'>in </span>result)</div>
+
+                    <div class='codepad'>
+                        <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(number);</span></div>
+                    </div>
+
+                    <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Takes numbers one by one, and stops when condition is no longer met:</span><br/>
+            <span>1</span><br/>
+            <span>2</span><br/>
+            <span>3</span><br/>
+            <span>4</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

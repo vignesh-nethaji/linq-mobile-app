@@ -1,0 +1,103 @@
+<ion-header>
+    <ion-navbar color="app-green-light">
+        <ion-title>GroupJoin (left outer join)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Groups two collections by a common key value, and is similar to left outer join in SQL. </li>
+                <li>This Lambda Expression sample groups collection "persons" with collection "languages" by a common key. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <!--<div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Aggregate_Lambda_Simple</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>numbers</span><span> = </span> <span class="langkeywords">new int</span>                <span>[ ] &#123; 1, 2, 3, 4, 5 &#125;;</span></div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers.</span><span class='langmethod'>Aggregate</span>((a,
+                b) => a * b);</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Aggregated numbers by multiplication:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(result);</span></div>
+
+            <div> }</div>-->
+
+            <div><span class='langkeywords'>class </span> <span class='langmethod'>Language</span></div>
+            <div> &#123;</div>
+                <div class='codepad'><span class='langkeywords'>public  </span><span class='langkeywords'>int </span> Id &#123;<span class='langkeywords'>get</span>;
+                    <span class='langkeywords'>set</span>; }</div>
+                <div class='codepad'><span class='langkeywords'>public  </span> <span class='langkeywords'>string </span> Name &#123; <span class='langkeywords'>get</span>;
+                    <span class='langkeywords'>set</span>; }</div>
+                <div>}</div>
+
+                <div><span class='langkeywords'>class </span> <span class='langmethod'>Person</span></div>
+                <div>&#123;</div>
+                <div class='codepad'><span class='langkeywords'>public  </span><span class='langkeywords'>int </span> LanguageId &#123;
+                    <span
+                        class='langkeywords'>get</span>; <span class='langkeywords'>set</span>; }</div>
+                <div class='codepad'><span class='langkeywords'>public  </span><span class='langkeywords'>string </span> FirstName &#123;
+                    <span
+                        class='langkeywords'>get</span>; <span class='langkeywords'>set</span>; }</div>
+                <div>}</div>
+
+<div><span class='langkeywords'>private static void </span><span class='langmethod'>Sample_GroupJoin_Lambda</span>()</div>
+ <div>&#123;</div>
+    <div class='codepad'><span class="langmethod">Language</span>[ ] languages = <span class='langkeywords'>new </span><span class="langmethod">Language</span>[ ]</div>
+     <div class='codepad'>&#123;</div>
+        <div class='codepad'><div class='codepad'><span class='langkeywords'>new </span><span class="langmethod">Language </span>  &#123; <span class="langmethod">Id </span>= 1, <span class="langmethod">Name </span>= <span class="langvalue">"English" </span>},</div></div>
+        <div class='codepad'><div class='codepad'><span class='langkeywords'>new </span><span class="langmethod">Language </span> &#123; <span class="langmethod">Id </span>= 2, <span class="langmethod">Name </span>= <span class="langvalue">"Russian" </span>}</div></div>
+    <div class='codepad'>};</div>
+
+    <div class='codepad'><span class="langmethod">Person</span>[ ] persons = <span class='langkeywords'>new </span><span class="langmethod">Person</span>[ ]</div>
+     <div class='codepad'>&#123;</div>
+        <div class='codepad'><div class='codepad'><span class='langkeywords'>new </span><span class="langmethod">Person  </span>&#123; <span class="langmethod">LanguageId </span>= 1, <span class="langmethod">FirstName </span>= <span class="langvalue">"Tom" </span> },</div></div>
+        <div class='codepad'><div class='codepad'><span class='langkeywords'>new </span><span class="langmethod">Person  </span>&#123; <span class="langmethod">LanguageId </span>= 1, <span class="langmethod">FirstName </span>= <span class="langvalue">"Sandy" </span> },</div></div>
+        <div class='codepad'><div class='codepad'><span class='langkeywords'>new </span><span class="langmethod">Person  </span>&#123; <span class="langmethod">LanguageId </span>= 2, <span class="langmethod">FirstName </span>= <span class="langvalue">"Vladimir" </span> },</div></div>
+        <div class='codepad'><div class='codepad'><span class='langkeywords'>new </span><span class="langmethod">Person  </span>&#123; <span class="langmethod">LanguageId </span>= 2, <span class="langmethod">FirstName </span>= <span class="langvalue">"Mikhail" </span> },</div></div>
+    <div class='codepad'>};</div>
+
+    <div class='codepad'><span class='langkeywords'>var </span>result = languages.<span class="langmethod">GroupJoin</span>(persons, lang => lang.<span class="langmethod">Id</span>, pers => pers.<span class="langmethod">LanguageId</span>,</div> 
+        <div class='codepad'><div class='codepad'>(lang, ps) => new  &#123; <span class="langmethod">Key </span> = lang.<span class="langmethod">Name </span>, <span class="langmethod">Persons</span> = ps });</div></div>
+
+    <div class='codepad'><span class="langmethod">Console.WriteLine</span>(<span class="langvalue">"Group-joined list of people speaking either English or Russian:"</span>);</div>
+    <div class='codepad'><span class="langkeywords">foreach </span>(<span class="langkeywords">var </span>language <span class="langkeywords">in </span>result)</div>
+     <div class='codepad'>&#123;</div>
+        <div class='codepad'><div class='codepad'><span class="langmethod">Console.WriteLine</span>(<span class="langmethod">String.Format</span>(<span class="langvalue">"Persons speaking &#123;0}:"</span>, language.<span class="langmethod">Key</span>));</div></div>
+
+        <div class='codepad'><div class='codepad'><span class="langkeywords">foreach </span>(<span class="langkeywords">var </span>person <span class="langkeywords">in</span> language.<span class="langmethod">Persons</span>)</div></div>
+         <div class='codepad'><div class='codepad'>&#123;</div></div>
+            <div class='codepad'><div class='codepad'><div class='codepad'><span class="langmethod">Console.WriteLine</span>(person.<span class="langmethod">FirstName</span>);</div></div></div>
+        <div class='codepad'><div class='codepad'>}</div></div>
+    <div class='codepad'>}</div>
+<div>}</div>
+
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Group-joined list of people speaking either English or Russian:</span><br/>
+            <span>Persons speaking English:</span><br/>
+            <span>Tom</span><br/>
+            <span>Sandy</span><br/>
+            <span>Persons speaking Russian:</span><br/>
+            <span>Vladimir</span><br/>
+            <span>Mikhail</span><br/>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

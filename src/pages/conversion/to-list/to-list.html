@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar color="app-pink">
+        <ion-title> ToList</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Converts collection into a List. </li>
+                <li>This Lambda Expression sample converts string array to List of strings.</li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_ToList_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>string</span><span>[] </span> <span>names </span><span> = </span><span>&#123; <span class='langvalue'>"Brenda"</span>,
+                <span class='langvalue'>"Carl"</span>, <span class='langvalue'>"Finn"</span> &#125;;</span>
+            </div>
+
+            <div class='codepad'><span class="langmethod">List</span><span class="langvalue">&lt;string&gt; </span> <span>result = names.</span><span class="langmethod">ToList</span>();</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Aggregated numbers by multiplication:"</span><span>);</span></div>
+            <div class='codepad'><span class='langmethod'>Console</span><span>.</span><span class="langmethod">WriteLine</span><span>(</span>
+                <span
+                    class="langmethod">String</span>.<span class="langmethod">Format</span>(<span class="langvalue">"names is of type: &#123;0}"</span>,
+                    names.<span class="langmethod">GetType</span>().<span class="langmethod">Name</span>));</div>
+            <div class='codepad'><span class='langmethod'>Console</span>.<span class='langmethod'>WriteLine</span>(<span class='langmethod'>String</span>.
+                <span
+                    class='langmethod'>Format</span>(<span class="langvalue">"result is of type: &#123;0}"</span>, result.<span class='langmethod'>GetType</span>().
+                    <span
+                        class='langmethod'>Name</span>));</div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span> names is of type: String[]</span><br/>
+            <span>result is of type: List</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

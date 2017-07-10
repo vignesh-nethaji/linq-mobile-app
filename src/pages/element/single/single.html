@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-navbar color="app-purple">
+        <ion-title>Single</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Retrieves only element in a collection. Throws exception if not exactly one element in collection. </li>
+                <li>This Lambda Expression sample retrieves a single element from each array, but from arrays with not exactly
+                    one element it throws exception. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Single_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+            <div class='codepad'><span class="langkeywords">string</span>[ ] names1 = &#123; <span class='langvalue'>"Peter"</span> };</div>
+            <div class='codepad'><span class="langkeywords">string</span>[ ] names3 = &#123; <span class='langvalue'>"Peter"</span>, <span class='langvalue'>"Joe"</span>,
+                <span class='langvalue'>"Wilma"</span> };</div>
+            <div class='codepad'><span class="langkeywords">string</span>[ ] empty = &#123; };</div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result1 = names1.</span><span class='langmethod'>Single</span>();</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"The only name in the array is:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(result1);</span></div>
+
+            <div class="codepad"><span class="langkeywords">try</span></div>
+            <div class="codepad"><span>&#123;</span></div>
+            <div class="codepad">
+                <div class="codepad">
+                    <span class="langkeywords">var</span> <span>resultEmpty = empty.</span><span class="langmethod">Single</span><span>();</span>
+                </div>
+            </div>
+            <div class="codepad">}</div>
+            <div class="codepad"><span class="langkeywords">catch (</span><span class="langmethod">Exception </span><span> e)</span></div>
+            <div class="codepad"><span>&#123;</span></div>
+            <div class="codepad">
+                <div class="codepad">
+                    <span class="langmethod">Console</span>.<span class="langmethod">WriteLine</span><span>(e.<span class="langmethod">Message</span>)</span>
+                </div>
+            </div>
+            <div class="codepad">}</div>
+
+            <div class="codepad"><span class="langkeywords">try</span></div>
+            <div class="codepad"><span>&#123;</span></div>
+            <div class="codepad">
+                <div class="codepad">
+                    <span class="langkeywords">var</span> <span>result3 = names3.</span><span class="langmethod">Single</span><span>();</span>
+                </div>
+            </div>
+            <div class="codepad">}</div>
+            <div class="codepad"><span class="langkeywords">catch (</span><span class="langmethod">Exception </span><span> e)</span></div>
+            <div class="codepad"><span>&#123;</span></div>
+            <div class="codepad">
+                <div class="codepad">
+                    <span class="langmethod">Console</span>.<span class="langmethod">WriteLine</span><span>(e.<span class="langmethod">Message</span>)</span>
+                </div>
+            </div>
+            <div class="codepad">}</div>
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>The only name in the array is:</span><br/>
+            <span>Peter</span><br/>
+            <span>A first chance exception of type 'System.InvalidOperationException' occurred in System.Core.dll</span><br/>
+            <span>Sequence contains no elements</span><br/>
+            <span>A first chance exception of type 'System.InvalidOperationException' occurred in System.Core.dll</span><br/>
+            <span>Sequence contains more than one element</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

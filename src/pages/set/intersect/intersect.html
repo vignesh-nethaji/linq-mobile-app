@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar color="app-grey">
+        <ion-title> Intersect</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Takes only the elements that are shared between two collections. </li>
+                <li>This Lambda Expression sample creates a new collection with values shared between the two arrays. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Intersect_Lambda</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>int</span>[] <span>numbers1 </span><span> = </span> <span class="langkeywords">new int</span>            <span>[ ] &#123; 1, 2, 3 &#125;;</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>int</span>[] <span>numbers2 </span><span> = </span> <span class="langkeywords">new int</span>            <span>[ ] &#123; 3, 4, 5  &#125;;</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers1.</span><span class='langmethod'>Intersect</span>(numbers2);</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Intersect creates a single sequence with only the duplicates:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>int </span>number <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'><div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(number);</span></div></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span> Intersect creates a single sequence with only the duplicates:</span><br/>
+            <span>3</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

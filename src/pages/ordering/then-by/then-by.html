@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-navbar color="app-indigo">
+        <ion-title>ThenBy</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Use after earlier sorting, to further sort a collection in ascending order. </li>
+                <li>This Lambda Expression sample first sorts array by string length of city capital, and then by alphabet. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_ThenBy_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>string</span>[] <span>capitals </span><span> = </span> <span>[ ] &#123; <span class='langvalue'>"Berlin"</span>,
+                <span class='langvalue'>"Paris"</span>, <span class='langvalue'>"Madrid"</span>, <span class='langvalue'>"Tokyo"</span>,
+                <span class='langvalue'>"London"</span>, <span class='langvalue'>"Athens"</span>, <span class='langvalue'>"Beijing"</span>,
+                <span class='langvalue'>"Seoul"</span> &#125;;</span>
+            </div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = capitals.</span><span class='langmethod'>OrderBy</span>(c
+                => c.<span class='langmethod'>Length</span>).<span class='langmethod'>ThenBy</span>(c => c);</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Ordered list of capitals, first by length and then alphabetical:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>string </span>capital <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(capital);</span></div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Ordered list of capitals, first by length and then alphabetical:</span><br/>
+            <span>Paris</span><br/>
+            <span>Seoul</span><br/>
+            <span>Tokyo</span><br/>
+            <span>Athens</span><br/>
+            <span>Berlin</span><br/>
+            <span>London</span><br/>
+            <span>Madrid</span><br/>
+            <span>Beijing</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

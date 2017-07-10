@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="app-red-med">
+        <ion-title>Count</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Returns the number of elements in a collection. </li>
+                <li>This Lambda Expression sample counts names in array. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Count_Lambda</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>string</span><span>[ ]</span><span>names </span><span> = </span>  &#123; <span class='langvalue'>"Peter"</span>, <span class='langvalue'>"John"</span>, <span class='langvalue'>"Kathlyn"</span>, <span class='langvalue'>"Allen"</span>, <span class='langvalue'>"Tim"</span>  &#125;;</div>
+            
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = names.</span><span class='langmethod'>Count</span>();</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Counting names gives:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(result);</span></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Counting names gives:</span><br/>
+            <span>5</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

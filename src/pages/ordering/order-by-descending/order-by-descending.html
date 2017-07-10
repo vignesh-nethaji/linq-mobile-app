@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar color="app-indigo">
+        <ion-title>OrderByDescending</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Sorts a collection in descending order. </li>
+                <li>This Lambda Expression sample sorts array of names in descending order. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_OrderByDescending_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>string</span>[ ] <span>names </span><span> = </span> <span> &#123; <span class='langvalue'>"Ned"</span>,
+                <span class='langvalue'>"Ben"</span>, <span class='langvalue'>"Susan"</span> &#125;;</span>
+            </div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = names.</span><span class='langmethod'>OrderByDescending</span>(n
+                => n);</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Descending ordered list of names:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>string </span>name <span class='langkeywords'>in </span>                result)</div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(name);</span></div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Descending ordered list of names:</span><br/>
+            <span>Susan</span><br/>
+            <span>Ned</span><br/>
+            <span>Ben</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

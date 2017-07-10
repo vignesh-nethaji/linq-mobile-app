@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-navbar color="app-teal-light">
+        <ion-title>Where (simple - objects)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Filters elements from a collection to satisfy a specified condition. </li>
+                <li>This Lambda Expression sample finds all persons who are 30 years or older. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>class </span><span class='langmethod'>Person</span></div>
+            <div>&#123;</div>
+            <div class='codepad'><span class='langkeywords'>public string </span><span class='langmethod'>Name </span>&#123; <span class='langkeywords'>get</span>;
+                <span class='langkeywords'>set</span>; }</div>
+            <div class='codepad'><span class='langkeywords'>public int </span><span class='langmethod'>Age </span>&#123; <span class='langkeywords'>get</span>;
+                <span class='langkeywords'>set</span>; }</div>
+            <div>}</div>
+
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Aggregate_Lambda_Simple</span><span>()</span></div>
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langmethod'>Person</span>[] persons = &#123;</div>
+            <div class='codepad'>
+                <div class='codepad'><span class='langkeywords'>new </span><span class='langmethod'>Person </span>&#123; <span class='langmethod'>Name </span>=
+                    <span class='langvalue'>"Mike"</span>, <span class='langmethod'>Age</span> = 25 },</div>
+            </div>
+            <div class='codepad'>
+                <div class='codepad'><span class='langkeywords'>new </span><span class='langmethod'>Person </span>&#123; <span class='langmethod'>Name </span>=
+                    <span class='langvalue'>"Joe"</span>, <span class='langmethod'>Age</span> = 43 },</div>
+            </div>
+            <div class='codepad'>
+                <div class='codepad'><span class='langkeywords'>new </span><span class='langmethod'>Person </span>&#123; <span class='langmethod'>Name </span>=
+                    <span class='langvalue'>"Nadia"</span>, <span class='langmethod'>Age</span> = 31 }</div>
+            </div>
+            <div class='codepad'>};</div>
+
+            <div class='codepad'><span class='langkeywords'>var </span> <span>result = persons.</span><span class='langmethod'>Where</span>(p => p.<span class='langmethod'>Age </span>>= 30);</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Finding persons who are 30 years old or older:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>Person </span>person <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'><div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(<span class='langmethod'>String.Format</span>(<span class='langvalue'>"&#123;0}: &#123;1} years old"</span>, person.<span class='langmethod'>Name</span>, person.<span class='langmethod'>Age</span>));</span></div></div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Finding persons who are 30 years old or older:</span><br/>
+            <span>Joe: 43 years old</span><br/>
+            <span>Nadia: 31 years old</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="app-purple">
+        <ion-title>First (simple)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Retrieves first element from a collection. Throws exception if collection is empty. </li>
+                <li>This Lambda Expression sample retrieves first element from an array.  </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_First_Lambda_Simple</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>string</span>[] <span>fruits </span><span> = </span><span> &#123; <span class="langvalue">"Banana"</span>, <span class="langvalue">"Apple"</span>, <span class="langvalue">"Orange"</span>  &#125;;</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = fruits.</span><span class='langmethod'>First</span>();</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"First element in the array is:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(result);</span></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span> First element in the array is:</span><br/>
+            <span>Banana</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

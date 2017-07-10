@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar color="app-red-med">
+        <ion-title>LongCount</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Returns the number of elements in collections larger than Int32.MaxValue. </li>
+                <li>This Lambda Expression sample counts elements in array larger than Int32.MaxValue.</li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_LongCount_Lambda</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>var</span> <span>largeArr </span><span> = </span> <span class="langmethod">Enumerable</span> <span>.</span><span class="langmethod">Range</span><span>( 0 ,</span><span class="langmethod">Int32</span><span>.</span><span class="langmethod">MaxValue</span>
+            <span>).</span><span class='langmethod'>Concat</span><span>(</span><span class='langmethod'>Enumerable</span><span>.</span><span class='langmethod'>Range</span><span>(0, 5));</span>
+            </div>
+            
+            <div class='codepad'><span class='langkeywords'>Int64 </span> <span>result = largeArr.</span><span class='langmethod'>LongCount</span>();</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Counting largeArr elements:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(result);</span></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span> Counting largeArr elements:</span><br/>
+            <span>2147483652</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

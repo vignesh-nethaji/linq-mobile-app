@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-navbar  color="app-purple-light">
+        <ion-title>GroupBy</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Projects elements of a collection into groups by key. </li>
+                <li>This Lambda Expression sample splits array of numbers into two groups: one which is divisible by 10, and
+                    one which is not.¬ </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_GroupBy_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>int</span>[ ] <span>numbers</span><span> = </span> <span class="langkeywords">new int</span>                <span>[ ] &#123; 10, 15, 20, 25, 30, 35  &#125;;</span></div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers.</span><span class='langmethod'>GroupBy</span>(n
+                => (n % 10 == 0));</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"GroupBy has created two groups:"</span><span>);</span></div>
+
+            <div class='codepad'><span class="langkeywords">foreach </span>>(<span class="langmethod">IGrouping</span>&lt;<span class="langkeywords">bool</span>,
+                <span class="langkeywords">int</span>&gt; group <span class="langkeywords">in</span> result)</div>
+            <div class='codepad'>&#123;</div>
+            <div class='codepad'>
+                <div class='codepad'><span class="langkeywords">if </span>(group.<span class="langmethod">Key</span> == <span class="langkeywords">true</span>)</div>
+            </div>
+            <div class='codepad'>
+                <div class='codepad'>
+                    <div class='codepad'><span class="langmethod">Console.WriteLine</span>(<span class="langvalue">"Divisible by 10"</span>);</div>
+                </div>
+            </div>
+            <div class='codepad'>
+                <div class='codepad'><span class="langkeywords">else</span></div>
+            </div>
+            <div class='codepad'>
+                <div class='codepad'>
+                    <div class='codepad'><span class="langmethod">Console.WriteLine</span>(<span class="langvalue">"Not Divisible by 10"</span>);</div>
+                </div>
+            </div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class="langkeywords">foreach </span>(<span class="langkeywords">int</span> number <span class="langkeywords">in</span>                    group)</div>
+            </div>
+            <div class='codepad'>
+                <div class='codepad'>
+                    <div class='codepad'><span class="langmethod">Console.WriteLine</span>(number);</div>
+                </div>
+            </div>
+            <div class="codepad">}</div>
+
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>GroupBy has created two groups:</span><br/>
+            <span>Divisible by 10</span><br/>
+            <span>10</span><br/>
+            <span>20</span><br/>
+            <span>30</span><br/>
+            <span>Not Divisible by 10</span><br/>
+            <span>15</span><br/>
+            <span>25</span><br/>
+            <span>35</span><br/>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar  color="app-green-light">
+        <ion-title>Join (inner join)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Joins two collections by a common key value, and is similar to inner join in SQL. </li>
+                <li>This Lambda Expression sample joins two arrays where elements match in both.  </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Join_Lambda</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <!--<div class='codepad'><span class='langkeywords'>var</span> <span>numbers</span><span> = </span> <span class="langkeywords">new int</span>            <span>[ ] &#123; 1, 2, 3, 4, 5 &#125;;</span></div>-->
+            
+            <div class='codepad'><span class='langkeywords'>string</span>[] warmCountries = &#123; <span class='langvalue'>"Turkey"</span>, <span class='langvalue'>"Italy"</span>, <span class='langvalue'>"Spain"</span>, <span class='langvalue'>"Saudi Arabia"</span>, <span class='langvalue'>"Etiobia"</span> };</div>
+            <div class='codepad'><span class='langkeywords'>string</span>[] europeanCountries = &#123; <span class='langvalue'>"Denmark"</span>, <span class='langvalue'>"Germany"</span>, <span class='langvalue'>"Italy"</span>, <span class='langvalue'>"Portugal"</span>, <span class='langvalue'>"Spain"</span> };</div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = warmCountries.</span><span class='langmethod'>Join</span>(europeanCountries, warm => warm, european => european, (warm, european) => warm);</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Joined countries which are both warm and Europan:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class="langkeywords">var </span>country <span class="langkeywords">in </span>result)</div>
+            <div class="codepad"><div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(country);</span></div></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Joined countries which are both warm and European:</span><br/>
+            <span>Italy</span><br/>
+            <span>Spain</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

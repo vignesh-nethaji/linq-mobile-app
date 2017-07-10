@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar color="app-purple">
+        <ion-title>ElementAtOrDefault</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Retrieves element from a collection at specified (zero-based) index, but gets default value if out-of-range. </li>
+                <li>This Lambda Expression sample retrieves elements at index 1 and 10 from array, and because index 10 is out-of-range, it gets default value (null). </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_ElementAtOrDefault_Lambda</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>string</span>[] <span>colors </span><span> = </span><span> &#123; <span class='langvalue'>"Red"</span>, <span class='langvalue'>"Green"</span>, <span class='langvalue'>"Blue"</span> &#125;;</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>var</span> <span>resultIndex1  = colors.</span><span class='langmethod'>ElementAtOrDefault</span>(1);</div>
+
+            <div class='codepad'><span class='langkeywords'>var</span> <span>resultIndex10  = colors.</span><span class='langmethod'>ElementAtOrDefault</span>(10);</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Element at index 1 in the array contains:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(resultIndex1);</span></div>
+            
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Element at index 10 in the array does not exist:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(resultIndex10 == <span class="langkeywords">null</span>);</span></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span> Element at index 1 in the array contains:</span><br/>
+            <span>Green</span><br/>
+             <span> Element at index 10 in the array does not exist:</span><br/>
+            <span>True</span>
+
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,74 @@
+<ion-header>
+    <ion-navbar color="app-teal">
+        <ion-title>SelectMany (cross join)</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Flattens collections into a single collection (similar to cross join in SQL). </li>
+                <li>This Lambda Expression sample cross joins two arrays, and gets cartesian product. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_SelectMany_Lambda</span><span>()</span></div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'><span class='langkeywords'>string</span>[] <span>fruits </span><span> = </span><span>[ ] &#123; <span class='langvalue'>"Grape"</span>,
+                <span class='langvalue'>"Orange"</span>, <span class='langvalue'>"Apple"</span> &#125;;</span>
+            </div>
+
+            <div class="codepad"><span class='langkeywords'>int</span>[] amounts = &#123; 1, 2, 3 };</div>
+
+            <div class='codepad'><span class='langkeywords'>var </span>result = fruits.<span class='langmethod'>SelectMany</span>(f => amounts,
+                (f, a) => <span class="langkeywords">new</span></div>
+
+            <div class='codepad'>&#123;</div>
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Fruit </span>= f,</div>
+            </div>
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Amount </span>= a</div>
+            </div>
+            <div class='codepad'>});</div>
+
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"Selecting all values from each array, and mixing them:"</span><span>);</span></div>
+
+            <div class='codepad'><span class='langkeywords'>foreach </span>(<span class='langkeywords'>var </span>o <span class='langkeywords'>in </span>result)</div>
+
+            <div class='codepad'>
+                <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(o.<span class='langmethod'>Fruit</span> + <span class='langvalue'>", "</span>                    + o.<span class='langmethod'>Amount</span>);</span>
+                </div>
+            </div>
+
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Selecting all values from each array, and mixing them:</span><br/>
+            <span>Grape, 1 </span><br/>
+            <span>Grape, 2 </span><br/>
+            <span>Grape, 3 </span><br/>
+            <span>Orange, 1</span><br/>
+            <span>Orange, 2</span><br/>
+            <span>Orange, 3</span><br/>
+            <span>Apple, 1 </span><br/>
+            <span>Apple, 2 </span><br/>
+            <span>Apple, 3 </span><br/>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar color="app-purple-mild">
+        <ion-title>SequenceEqual</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Checks whether two collections are equal. Use StringComparer.OrdinalIgnoreCase parameter to ignore case.
+                    </li>
+                <li>This Lambda Expression sample shows different methods to test for array equality. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_SequenceEqual_Lambda</span><span>()</span></div>
+            <div> &#123;</div>
+            <div class="codepad"><span class="langkeywords">string</span>[] <span>words = &#123; </span><span class="langvalue">"one"</span>, <span class="langvalue">"two"</span>,   <span class="langvalue">"three"</span> };</div>
+            <div class="codepad"><span class="langkeywords">string</span>[] <span>wordsSame = &#123; </span><span class="langvalue">"one"</span>, <span class="langvalue">"two"</span>,   <span class="langvalue">"three"</span> };</div>
+            <div class="codepad"><span class="langkeywords">string</span>[] <span>wordsOrder = &#123; </span><span class="langvalue">"two"</span>, <span class="langvalue">"three"</span>, <span class="langvalue">"one"</span> };</div>
+            <div class="codepad"><span class="langkeywords">string</span>[] <span>wordsCase = &#123; </span><span class="langvalue">"one"</span>, <span class="langvalue">"TWO"</span>,   <span class="langvalue">"three"</span> };</div>
+            <div class="codepad"><span class="langkeywords">var </span>resultSame = words.<span class="langmethod">SequenceEqual</span>(wordsSame);</div>
+            <div class="codepad"><span class="langkeywords">var </span>resultOrder = words.<span class="langmethod">SequenceEqual</span>(wordsOrder);</div>
+            <div class="codepad"><span class="langkeywords">var </span>resultCase = words.<span class="langmethod">SequenceEqual</span>(wordsCase);</div>
+            <div class="codepad"><span class="langkeywords">var </span>resultCaseIgnored = words.<span class="langmethod">SequenceEqual</span>(wordsCase, <span class="langmethod">StringComparer.OrdinalIgnoreCase</span>);</div>
+            <div class="codepad"><span class="langmethod">Console.WriteLine</span>(<span class="langvalue">"SequenceEqual on two identical arrays:"</span>);</div>
+            <div class="codepad"><span class="langmethod">Console.WriteLine</span>(resultSame);</div>
+            <div class="codepad"><span class="langmethod">Console.WriteLine</span>(<span class="langvalue">"SequenceEqual on two differently ordered but otherwise identical arrays:"</span>);</div>
+            <div class="codepad"><span class="langmethod">Console.WriteLine</span>(resultOrder);</div>
+            <div class="codepad"><span class="langmethod">Console.WriteLine</span>(<span class="langvalue">"SequenceEqual on two differently cased but otherwise identical arrays:"</span>);</div>
+            <div class="codepad"><span class="langmethod">Console.WriteLine</span>(resultCase);</div>
+            <div class="codepad"><span class="langmethod">Console.WriteLine</span>(<span class="langvalue">"SequenceEqual on two differently cased but otherwise identical arrays, where case is ignored:"</span>);</div>
+            <div class="codepad"><span class="langmethod">Console.WriteLine</span>(resultCaseIgnored);</div>
+            <div> }</div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>SequenceEqual on two identical arrays:</span><br/>
+            <span>True</span><br/>
+            <span>SequenceEqual on two differently ordered but otherwise identical arrays:</span><br/>
+            <span>False</span><br/>
+            <span>SequenceEqual on two differently cased but otherwise identical arrays:</span><br/>
+            <span>False</span><br/>
+            <span>SequenceEqual on two differently cased but otherwise identical arrays, where case is ignored:</span><br/>
+            <span>True</span><br/>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

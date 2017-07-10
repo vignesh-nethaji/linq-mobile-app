@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="app-teal-light">
+        <ion-title>Contains</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Checks if any elements in a collection satisifies a specified value. </li>
+                <li>This Lambda Expression sample checks whether array of numbers contains value of 5.  </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div><span class='langkeywords'>private static void</span> <span class='langmethod'>Sample_Contains_Lambda</span><span>()</span></div>
+           
+            <div>	&#123;</div>
+           
+            <div class='codepad'><span class='langkeywords'>int</span>[] <span>numbers</span><span> = </span> <span class="langkeywords">new int</span>            <span>[ ] &#123; 1, 3, 5, 7, 9 &#125;;</span></div>
+            
+            <div class='codepad'><span class='langkeywords'>var</span> <span>result = numbers.</span><span class='langmethod'>Contains</span>(5);</div>
+           
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(</span><span class='langvalue'>"sequence contains the value 5:"</span><span>);</span></div>
+            
+            <div class='codepad'><span class='langmethod'>Console.WriteLine</span><span>(result);</span></div>
+            
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>sequence contains the value 5:</span><br/>
+            <span>True</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

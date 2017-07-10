@@ -1,0 +1,168 @@
+<ion-header>
+    <ion-navbar color="app-pink">
+        <ion-title>ToDictionary (simple) </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ul>
+                <li>Converts collection into a Dictionary with Key and Value. </li>
+                <li>This Lambda Expression sample inserts custom values into a dictionary. </li>
+            </ul>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Program</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <div>
+                <span class="langkeywords">class </span>
+                <span class="langmethod">English2German </span>
+            </div>
+
+            <div> &#123;</div>
+
+            <div class='codepad'>
+                <span class='langkeywords'>public string </span>
+                <span class="langmethod"> EnglishSalute </span>
+                <span> &#123; </span>
+                <span class='langkeywords'> get</span>
+                <span>; </span>
+                <span class='langkeywords'> set</span>
+                <span>; </span>
+                <span> }</span>
+            </div>
+            <div class='codepad'>
+                <span class='langkeywords'>public string </span>
+                <span class="langmethod"> GermanSalute  </span>
+                <span> &#123; </span>
+                <span class='langkeywords'> get</span>
+                <span>; </span>
+                <span class='langkeywords'> set</span>
+                <span>; </span>
+                <span> }</span>
+            </div>
+            <div> }</div>
+            <div>
+                <span class='langkeywords'>private static void</span>
+                <span class='langmethod'>Sample_ToDictionary_Lambda_Simple</span>
+                <span>()</span>
+            </div>
+            <div> &#123;</div>
+            <div class='codepad'>
+                <span class="langmethod">English2German</span>
+                <span>[ ] english2German =</span>
+            </div>
+            <div class='codepad'>&#123; </div>
+            <div class="codepad">
+                <div class='codepad'>
+                    <span class='langkeywords'>new </span>
+                    <span class="langmethod">English2German </span>
+                    <span>&#123;</span>
+                    <span class="langmethod">EnglishSalute </span>
+                    <span>= </span> <span class='langvalue'>"Good morning"</span>
+                    <span>, </span>
+                    <span class="langmethod">GermanSalute </span>
+                    <span>= </span>
+                    <span class='langvalue'>"Guten Morgen"</span>
+                    <span> },</span>
+                </div>
+                <div class='codepad'>
+                    <span class='langkeywords'>new</span>
+                    <span class="langmethod">English2German  </span>
+                    <span>&#123;</span>
+                    <span class="langmethod">EnglishSalute </span>
+                    <span> = </span>
+                    <span class='langvalue'>"Good day"</span>
+                    <span>, </span>
+                    <span class="langmethod">GermanSalute </span>
+                    <span> = </span>
+                    <span class="langvalue">"Guten Tag"</span>
+                    <span>},</span>
+                </div>
+                <div class='codepad'>
+                    <span class='langkeywords'>new</span>
+                    <span class="langmethod">English2German  </span>
+                    <span>&#123;</span>
+                    <span class="langmethod">EnglishSalute </span>
+                    <span> = </span>
+                    <span class="langvalue"> "Good evening" </span>
+                    <span> , </span>
+                    <span class="langmethod">GermanSalute </span>
+                    <span> = </span>
+                    <span class="langvalue">"Guten Abend"</span>
+                    <span>},</span>
+                </div>
+            </div>
+            <div class="codepad">
+                <span>};</span>
+            </div>
+            <div class="codepad">
+                <span class='langkeywords'>var </span>
+                <span> result = english2German.</span>
+                <span class="langmethod">ToDictionary</span>
+                <span>(k =&gt; k.</span>
+                <span class="langmethod">EnglishSalute </span>
+                <span>, v =&gt; v.</span>
+                <span class="langmethod">GermanSalute </span>
+                <span>);</span>
+            </div>
+            <div class="codepad">
+                <span class="langmethod">Console</span>
+                <span>.</span>
+                <span class="langmethod">WriteLine</span>
+                <span>(</span>
+                <span class="langvalue">"Values inserted into dictionary:"</span>
+                <span>);</span>
+            </div>
+            <div class="codepad">
+                <span class='langkeywords'>foreach</span>
+                <span> (</span>
+                <span class="langmethod">KeyValuePair</span>
+                <span>&lt;</span>
+                <span class='langkeywords'>string</span>
+                <span>,</span>
+                <span class='langkeywords'>string</span>
+                <span>&gt;</span>
+                <span>dic </span>
+                <span class='langkeywords'>in </span>
+                <span>result)</span>
+            </div>
+            <div class="codepad">
+                <div class="codepad">
+                    <span class="langmethod">Console</span>
+                    <span>.</span>
+                    <span class="langmethod">WriteLine</span>
+                    <span>(</span>
+                    <span class="langmethod">String</span>
+                    <span>.</span>
+                    <span class="langmethod">Format</span>
+                    <span>(</span>
+                    <span class="langvalue">"English salute &#123;0} is &#123;1} in German"</span>
+                    <span>, dic.</span>
+                    <span class="langmethod">Key</span>
+
+                    <span>, dic.</span>
+                    <span class="langmethod">Value</span>
+                    <span>));</span>
+                </div>
+            </div>
+            <div> }</div>
+
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <h2>Ouput</h2>
+            <hr/>
+        </ion-card-header>
+        <ion-card-content>
+            <span>Values put into dictionary:</span><br/>
+            <span>English salute Good morning is Guten Morgen in German</span><br/>
+            <span>English salute Good day is Guten Tag in German</span>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
