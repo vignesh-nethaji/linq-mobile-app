@@ -1,6 +1,16 @@
 // Ionic Variables and Theming. For more info, please see:
-// http://ionicframework.com/docs/v2/theming/
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
 $font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
 
 @import "ionic.globals";
 
@@ -10,7 +20,7 @@ $font-path: "../assets/fonts";
 // To customize the look and feel of this app, you can override
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
 
@@ -29,33 +39,33 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
+
   codekey:    rgb(0,0,136),
   codemethod: rgb(102,0,102),
   codestring: rgb(0,136,0),
   codevalue:  teal,
   codebackground:grey,
 
-
   //
-app-red-med:#F44336, 
-app-pink:#E91E63,
-app-purple:#9C27B0,
-app-purple-deep:#4A148C,
-app-purple-light:#673AB7,
-app-green-light:#66BB6A,
-app-indigo:#3F51B5,
-app-purple-mild:#B388FF,
-app-blue:#03A9F4,
-app-cyan:#00BCD4,
-app-teal:#009688,
-app-teal-light:#00BFA5,
-app-light-blue-mild:#80D8FF,
-app-teal-medium:#1DE9B6,
-app-cyan-light:#00B8D4,
-app-green:#4CAF50,
-app-yellow:#FFFF8D,
-app-orange:#FF7043,
-app-grey:#607D8B,
+  app-red-med:#F44336, 
+  app-pink:#E91E63,
+  app-purple:#9C27B0,
+  app-purple-deep:#4A148C,
+  app-purple-light:#673AB7,
+  app-green-light:#66BB6A,
+  app-indigo:#3F51B5,
+  app-purple-mild:#B388FF,
+  app-blue:#03A9F4,
+  app-cyan:#00BCD4,
+  app-teal:#009688,
+  app-teal-light:#00BFA5,
+  app-light-blue-mild:#80D8FF,
+  app-teal-medium:#1DE9B6,
+  app-cyan-light:#00B8D4,
+  app-green:#4CAF50,
+  app-yellow:#FFFF8D,
+  app-orange:#FF7043,
+  app-grey:#607D8B,
 );
 
 
@@ -93,7 +103,7 @@ app-grey:#607D8B,
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
-// http://ionicframework.com/docs/v2/ionicons/
+// http://ionicframework.com/docs/ionicons/
 
 @import "ionic.ionicons";
 

@@ -1,5 +1,4 @@
-// http://ionicframework.com/docs/v2/theming/
-
+// http://ionicframework.com/docs/theming/
 
 // App Global Sass
 // --------------------------------------------------
@@ -14,18 +13,66 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-.langkeywords
-{
-    color:blue;
+.langkeywords {
+  color: blue;
 }
-.langmethod
-{
-     color:rgb(102,0,102);
+.langmethod {
+  color: rgb(102, 0, 102);
 }
-.langvalue{
-    color:green;
+.langvalue {
+  color: green;
 }
-.codepad
-{
-    padding: 0px 20px;
+.codepad {
+  padding: 0px 20px;
+}
+
+ion-icon {
+  &[class*="linq-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  }
+
+  &[class*="linq-aggregation"] {
+    mask-image: url(../assets/svg/linq-aggregation.svg);
+  }
+  &[class*="linq-conversion"] {
+    mask-image: url(../assets/svg/linq-conversion.svg);
+  }
+  &[class*="linq-join"] {
+    mask-image: url(../assets/svg/linq-join.svg);
+  }
+  &[class*="linq-partition"] {
+    mask-image: url(../assets/svg/linq-partition.svg);
+  }
+  &[class*="linq-group"] {
+    mask-image: url(../assets/svg/linq-group.svg);
+  }
+  &[class*="linq-order"] {
+    mask-image: url(../assets/svg/linq-order.svg);
+  }
+  &[class*="linq-projection"] {
+    mask-image: url(../assets/svg/linq-projection.svg);
+  }
+  &[class*="linq-restriction"] {
+    mask-image: url(../assets/svg/linq-restriction.svg);
+  }
+  &[class*="linq-quantifiers"] {
+    mask-image: url(../assets/svg/linq-quantifiers.svg);
+  }
+  &[class*="linq-element"] { 
+    mask-image: url(../assets/svg/linq-element.svg);
+  }
+  &[class*="linq-generation"] {
+    mask-image: url(../assets/svg/linq-generation.svg);
+  }
+  &[class*="linq-other"] {
+    mask-image: url(../assets/svg/linq-other.svg);
+  }
+  &[class*="linq-set"] {
+    mask-image: url(../assets/svg/linq-set.svg);
+  }
 }

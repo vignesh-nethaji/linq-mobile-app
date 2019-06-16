@@ -1,0 +1,5 @@
+Pending Task
+============
+1.improve Quantifiers content
+
+2.Move All Page details json to Page Info Provider.

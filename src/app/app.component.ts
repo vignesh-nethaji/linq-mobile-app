@@ -1,9 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component ,ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
 import { Introduction } from '../pages/introduction/introduction';
 import { Aggregation } from '../pages/aggregation/aggregation';
 import { Conversion } from '../pages/conversion/conversion';
@@ -22,37 +21,32 @@ import { SetPage } from '../pages/set/set';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = Introduction;
+  rootPage:any = Introduction;
   @ViewChild(Nav) nav: Nav;
   pages: Array<{ title: string, component: any, icon: string,color:string }>;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menu: MenuController) {
-
-
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
-      //setTimeout(function(){
-        splashScreen.hide();
-      //},10000);
-      
+      splashScreen.hide();
     });
-
+               
     this.pages = [
       { title: 'Introduction', component: Introduction, icon: 'albums',color:'primary' },
-      { title: 'Aggregation', component: Aggregation, icon: 'wifi', color: 'app-red-med' },
-      { title: 'Conversion', component: Conversion, icon: 'football', color: 'app-pink' },
-      { title: 'Element', component: ElementPage, icon: 'basketball', color: 'app-purple' },
-      { title: 'Generation', component: Generation, icon: 'paper-plane', color: 'app-purple-deep' },
-      { title: 'Grouping', component: Grouping, icon: 'body', color: 'app-purple-light' },
-      { title: 'Join', component: Join, icon: 'hammer', color: 'app-green-light' },
-      { title: 'Ordering', component: Ordering, icon: 'american-football', color: 'app-indigo' },
-      { title: 'Other', component: Other, icon: 'boat', color: 'app-purple-mild' },
-      { title: 'Partitioning', component: Partitioning, icon: 'aperture', color: 'app-orange' },
-      { title: 'Projection', component: Projection, icon: 'build', color: 'app-cyan' },
-      { title: 'Quantifiers', component: Quantifiers, icon: 'basket', color: 'app-teal' },
-      { title: 'Restriction', component: Restriction, icon: 'body', color: 'app-teal-light' },
-      { title: 'Set', component: SetPage, icon: 'book', color: 'app-grey' },
+      { title: 'Aggregation', component: Aggregation, icon: 'linq-aggregation', color: 'app-red-med' },
+      { title: 'Conversion', component: Conversion, icon: 'linq-conversion', color: 'app-pink' },
+      { title: 'Element', component: ElementPage, icon: 'linq-element', color: 'app-purple' },
+      { title: 'Generation', component: Generation, icon: 'linq-generation', color: 'app-purple-deep' },
+      { title: 'Grouping', component: Grouping, icon: 'linq-group', color: 'app-purple-light' },
+      { title: 'Join', component: Join, icon: 'linq-join', color: 'app-green-light' },
+      { title: 'Ordering', component: Ordering, icon: 'linq-order', color: 'app-indigo' },
+      { title: 'Other', component: Other, icon: 'linq-other', color: 'app-purple-mild' },
+      { title: 'Partitioning', component: Partitioning, icon: 'linq-partition', color: 'app-orange' },
+      { title: 'Projection', component: Projection, icon: 'linq-projection', color: 'app-cyan' },
+      { title: 'Quantifiers', component: Quantifiers, icon: 'linq-quantifiers', color: 'app-teal' },
+      { title: 'Restriction', component: Restriction, icon: 'linq-restriction', color: 'app-teal-light' },
+      { title: 'Set', component: SetPage, icon: 'linq-set', color: 'app-grey' },
     ];
     this.menu.enable(false);
   }

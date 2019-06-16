@@ -25,7 +25,6 @@ operators: Array<{ title: string, component: any, icon: string }>;
       { title: 'Except', component:ExceptPage, icon: 'flask' },
       { title: 'Intersect', component:IntersectPage, icon: 'flask' },
       { title: 'Union', component:UnionPage, icon: 'flask' },
-          
     ];
   }
   pageTapped(item: any) {

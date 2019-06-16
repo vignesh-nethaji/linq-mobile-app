@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="app-teal">
+  <ion-navbar color="app-cyan">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -19,7 +19,7 @@
 <ion-content padding>
 <ion-list>
     <button ion-item *ngFor="let item of operators" (click)="pageTapped(item.component)">
-       <ion-icon name="{{item.icon}}" item-left  color="app-teal"></ion-icon>
+       <ion-icon name="{{item.icon}}" item-left  color="app-cyan"></ion-icon>
         {{item.title}}
       </button>
   </ion-list>
