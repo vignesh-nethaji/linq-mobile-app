@@ -17,7 +17,7 @@ export class Grouping {
 operators: Array<{ title: string, component: any, icon: string }>;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
       this.operators = [
-      { title: 'GroupBy', component: GroupByPage, icon: 'flask' },
+      { title: 'Group By', component: GroupByPage, icon: 'flask' },
       
     ];
   }

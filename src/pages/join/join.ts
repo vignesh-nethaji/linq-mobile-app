@@ -18,8 +18,8 @@ export class Join {
 operators: Array<{ title: string, component: any, icon: string }>;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
       this.operators = [
-      { title: 'GroupJoin', component:GroupJoinPage , icon: 'flask' },
-      { title: 'InnerJoin', component:InnerJoinPage , icon: 'flask' },
+      { title: 'Group Join', component:GroupJoinPage , icon: 'flask' },
+      { title: 'Inner Join', component:InnerJoinPage , icon: 'flask' },
      
     ];
   }
