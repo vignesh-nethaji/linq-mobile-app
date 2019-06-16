@@ -1,4 +1,4 @@
-import { Component ,ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +21,7 @@ import { SetPage } from '../pages/set/set';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Introduction;
+  rootPage: any = Introduction;
   @ViewChild(Nav) nav: Nav;
   pages: Array<{ title: string, component: any, icon: string,color:string }>;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menu: MenuController) {
